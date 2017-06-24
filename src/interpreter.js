@@ -190,15 +190,15 @@ function studyDocument(astTree, callbacks) {
                 callbacks && callbacks.warn("Found a variable with multiple declarations", declaration);
             }
 
-            const declaration = declaration.declarations[0];
-            if (declaration.id.name) {
-                if (! (declaration.id.name in componentsByIdentifierName)) {
-                    componentsByIdentifierName[declaration.id.name] = [];
+            const declarator = declaration.declarations[0];
+            if (declarator.id.name) {
+                if (! (declarator.id.name in componentsByIdentifierName)) {
+                    componentsByIdentifierName[declarator.id.name] = [];
                 }
-                componentsByIdentifierName[declaration.id.name].push(declaration);
+                componentsByIdentifierName[declarator.id.name].push(declarator);
             }
 
-            addToWhichEverCollection(declaration, callbacks);
+            addToWhichEverCollection(declarator, callbacks);
         })
     ;
 
