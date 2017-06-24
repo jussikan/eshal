@@ -1,6 +1,6 @@
 {
   "name": "eshal",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Eshal interprets contents of ES6+ files as components",
   "license": "MIT",
   "author": "Jussi Känsälä <kansalaj@gmail.com>",
